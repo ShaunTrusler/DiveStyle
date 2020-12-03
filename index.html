@@ -1,128 +1,95 @@
-<!DOCTYPE html>
-<html>
-<head>
+<!doctype HTML>
+<HTML>
+<HEAD>
 	<style>
-		*{
-			box-sizing: border-box;
-		}
-		
 		body{
-			background-color: #35a2c9
+			background-color: #35a2c9;
 		}
 		
-		#Top-Section{
+		.header-bar{
+			display: flex;
+			height: 150px;
 			background-color: white;
-			width: 80%;
-			margin-left: 10%;
-			border-radius: 50px 50px 0px 0px;
+			justify-content: center;
+			align-items: center;
+			margin: -8px;
 		}		
 		
-		#Email{			
-			float: left;
-			padding-left: 20%;
+		.header-bar div{
+			
+			text-align: center;
 		}
 		
-		#Contact{			
-			float: right;
-			padding-right: 20%;
+		.mylink{
+			padding: 20px;
+			width: 150px;
 		}
 		
-		#Top-Section::after{
-			content: "";
-			clear: both;
-			display: table;
-		}
-		
-		#Header-Section{
-			display: flex;
-			justify-content: center;
-			background-color: #606b6f;
-			height: 200px;
-			width: 90%;
-			margin-left: 5%;
-			border-radius: 10px 10px 10px 10px;	
-			align-items: center;			
+		.mylink:hover{
+			background-color: #35a2c9;
+			border-radius: 20px 20px 20px 20px;
 		}
 		
 		.logo{
-			margin-left: 10px;
-			height: 180px;
+			height: 150px;
 		}
 		
-		#Logo-image{
+		.partner-logo{
+			height: 50px;
+		}
+		
+		.logoimage{
 			height: 100%;
 		}
 		
-		.navigation{
-			list-style-type: none;
-			background-color: white;
-			width: 100%;
-			margin-right: 10px;
-			height: 180px;
-			text-align: center;
+		.content-block{
+			
 		}
 		
-		.navigation li{
-			display: inline-block;
-			padding: 25px;
-			width: 150px;
-			text-align: center;
-		}
-		
-		.navigation li:hover{
-			background-color: #31a1c7;
-			border-radius: 50px;
-			width: 150px;
-		}
-		
-		.main-content{
-			background-color: white;
+		.slideshow{
 			width: 80%;
-			margin-top: -16px;
-			margin-left: 10%;
-			text-align: center;
-			border-radius: 0px 0px 50px 50px;
 		}
 		
+		.banners{
+			width: 100%;
+		}
 		
 	</style>
-</head>
-<body>
-	<div id='Top-Section'>
-		<div id='Email'>Email:<a href='mailto:Info@DiveStyle.co.za'>Info@ScubaLifeSA.co.za</a></div>
-		<div id='Contact'>Contact: 012 345 6789</div>
-	</div>
-	<div id='Header-Section'> 
-		<div class='logo'>
-			<img id='Logo-image' src='images/logo/Logov2.jpg'>
-		</div>
-		
-		<div class='navigation'>
-			<ul>
-				<li>Home</li>
-				<li>Academy</li>
-				<li>Travel</li>
-				<li>Calendar</li>
-				<li>Gallery</li>
-				<li>Contact Us</li>
-			</ul>
-		</div>
+</HEAD>
+<BODY>
+	<div class='header-bar'>
+		<div class='partner-logo'><img class='logoimage' src='media/logo/PADI_logo_300dpi_Hor_Trap_RGB.png'></div>
+		<div class='mylink'>Academy</div>
+		<div class='mylink'>Travel</div>
+		<div class='mylink'>Team</div>
+		<div class='logo'><a href='index.html'><img class='logoimage' src='media/logo/Logov2.jpg'></a></div>
+		<div class='mylink'>Calendar</div>
+		<div class='mylink'>About Us</div>
+		<div class='mylink'>Contact Us</div>
+		<div class='partner-logo'><img class='logoimage' src='media/logo/EFR-Logo.jpg'></div>
 	</div>
 	
-	<div class='main-content'>
-	<p>s</p>
-	<p>s</p>
-	<p>s</p>
-	<p>s</p>
-	<p>s</p>
-	<p>s</p>
-	<p>s</p>
-	<p>s</p><p>s</p>
-	<p>s</p>
-	<p>s</p>
-	<p>s</p>
-	<p>s</p>
-	
+	<div class='content-block'>
+		<div class='slideshow-contatiner'>
+			<div class='slideshow'>
+				<img class='banners' src='media/trips/Bahamas09_2575.jpg'>
+			</div>
+			<div class='slideshow'>
+				<img class='banners' src='media/trips/Palau05IMG_0228.jpg'>
+			</div>
+			<div class='slideshow'>
+				<img class='banners' src='media/banners/StartYourAdventure_Social_1080x1080_1.jpg'>
+			</div>
+			<div class='slideshow'>
+				<img class='banners' src='media/banners/StartYourAdventure_Social_1080x1080_2.jpg'>
+			</div>
+			<div class='slideshow'>
+				<img class='banners' src='media/banners/StartYourAdventure_Social_1080x1080_3.jpg'>
+			</div>
+			<div class='slideshow'>
+				<img class='banners' src='media/banners/StartYourAdventure_Social_1080x1080_4.jpg'>
+			</div>
+		</div>
 	</div>
-</body>
-</html>
+</BODY>
+</HTML>
