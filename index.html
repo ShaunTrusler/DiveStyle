@@ -40,18 +40,31 @@
 		
 		.logoimage{
 			height: 100%;
+			text-align: center;
 		}
 		
 		.content-block{
+			width: 100%;
 			
 		}
 		
+		.slideshow-contatiner{
+			height: 100%;
+
+		}
+		
 		.slideshow{
-			width: 80%;
+			height: 100%;
+			height: 80vh;
 		}
 		
 		.banners{
+			object-fit: contain;
 			width: 100%;
+			height: 100%;
+			margin-top: 8px;
+			margin-left: auto;
+			margin-right: auto;
 		}
 		
 	</style>
@@ -72,16 +85,16 @@
 	<div class='content-block'>
 		<div class='slideshow-contatiner'>
 			<div class='slideshow'>
-				<img class='banners' src='media/trips/Bahamas09_2575.jpg'>
-			</div>
-			<div class='slideshow'>
-				<img class='banners' src='media/trips/Palau05IMG_0228.jpg'>
-			</div>
-			<div class='slideshow'>
 				<img class='banners' src='media/banners/StartYourAdventure_Social_1080x1080_1.jpg'>
 			</div>
 			<div class='slideshow'>
+				<img class='banners' src='media/trips/Palau05IMG_0228-2.jpg'>
+			</div>
+			<div class='slideshow'>
 				<img class='banners' src='media/banners/StartYourAdventure_Social_1080x1080_2.jpg'>
+			</div>
+			<div class='slideshow'>
+				<img class='banners' src='media/trips/Bahamas09_2575-2.jpg'>
 			</div>
 			<div class='slideshow'>
 				<img class='banners' src='media/banners/StartYourAdventure_Social_1080x1080_3.jpg'>
@@ -91,5 +104,22 @@
 			</div>
 		</div>
 	</div>
+	
+	<script>
+		var slideIndex = 0;
+		showSlides();
+		
+		function showSlides(){
+			var slides = document.getElementsByClassName('slideshow');
+			for(i = 0; i < slides.length; i++){
+				slides[i].style.display = 'none';
+			}
+			
+			slideIndex++;
+			if(slideIndex > slides.length){slideIndex = 1;}
+			slides[slideIndex - 1].style.display = 'block';
+			setTimeout(showSlides, 2000);
+		}
+	</script>
 </BODY>
 </HTML>
