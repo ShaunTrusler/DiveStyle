@@ -50,23 +50,46 @@
 			width: 100%;
 		}
 		
-		.slideshow-contatiner{						
+		.slideshow-contatiner{
+			position: relative;
+			display: block;
+			width: 1080px;			
+			height: 800px;
+			padding: 1%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		
+		.slideshow{
 			
 		}
 		
-		.slideshow{		
-			display: block;
-			max-width: 1920px;
-		}
-		
-		.imagecontainer{
-			display: inline-block;
-			width: 45%;
-		}
 		
 		.banners{
 			width: 100%;
-			padding: 5%;
+			display: block;
+			object-fit: contain;
+			
+		}
+		
+		.prev, .next{
+			cursor: pointer;
+			position: absolute;
+			top: 50%;
+			width: auto;
+			margin-top: -50px;
+			color: white;
+			font-weight: bold;
+			font-size: 70px;
+			border-radius: 0 3px 3px 0;
+			z-index: 99;
+		}
+		
+		.prev{			
+		}
+		
+		.next{
+			right: 0;
 		}
 		
 	</style>
@@ -87,43 +110,71 @@
 	<div class='content-block'>
 		<div class='slideshow-contatiner'>
 			<div class='slideshow'>
-				<div class='imagecontainer'>
-					<img class='banners' src='media/banners/StartYourAdventure_Social_1080x1080_1.jpg'>
-				</div>
-				<div class='imagecontainer'>
-					<img class='banners' src='media/trips/Palau05IMG_02281.jpg'>
-				</div>
+					<img class='banners' src='media/banners/StartYourAdventure_Social_1080x1080_11.jpg'>
 			</div>
 			<div class='slideshow'>
-				<img class='banners' src='media/banners/StartYourAdventure_Social_1080x1080_2.jpg'>
-				<img class='banners' src='media/trips/Bahamas09_25751.jpg'>
+					<img class='banners' src='media/banners/Palau05IMG_0228.jpg'>
 			</div>
 			<div class='slideshow'>
-				<img class='banners' src='media/banners/StartYourAdventure_Social_1080x1080_3.jpg'>
-				<img class='banners' src='media/trips/375A5776.JPG'>
+				<img class='banners' src='media/banners/StartYourAdventure_Social_1080x1080_21.jpg'>
 			</div>
 			<div class='slideshow'>
-				<img class='banners' src='media/banners/StartYourAdventure_Social_1080x1080_4.jpg'>
-				<img class='banners' src='media/trips/HI08_0020.jpg'>
+				<img class='banners' src='media/banners/Bahamas09_2575.jpg'>
 			</div>
+			<div class='slideshow'>
+				<img class='banners' src='media/banners/StartYourAdventure_Social_1080x1080_31.jpg'>
+			</div>
+			<div class='slideshow'>
+				<img class='banners' src='media/banners/375A5776.png'>
+			</div>
+			<div class='slideshow'>
+				<img class='banners' src='media/banners/StartYourAdventure_Social_1080x1080_41.jpg'>
+			</div>
+			<div class='slideshow'>
+				<video id='advid' class='banners' controls><source src='media/banners/Start Your Adventure 2020-Warm_15sec.mp4'></video>
+			</div>
+			<a class="prev" onclick="selectSlide(-1)">&#10094;</a>
+			<a class="next" onclick="selectSlide(1)">&#10095;</a>
 		</div>
+		
+		
 	</div>
 	
 	<script>
 		var slideIndex = 0;
-		//showSlides();
+		var slides = document.getElementsByClassName('slideshow');
+		var myVideo = document.getElementById('advid');
+		showSlides();
+		
 		
 		function showSlides(){
-			var slides = document.getElementsByClassName('slideshow');
+			myVideo.pause();
 			for(i = 0; i < slides.length; i++){
 				slides[i].style.display = 'none';
 			}
-			
 			slideIndex++;
 			if(slideIndex > slides.length){slideIndex = 1;}
-			slides[slideIndex - 1].style.display = 'flex';
-			setTimeout(showSlides, 2000);
+			slides[slideIndex - 1].style.display = 'block';						
+			if(slideIndex == slides.length){
+				myVideo.currentTime = 0;
+				myVideo.play();
+			}
+			setTimeout(showSlides, 20000);
 		}
+		
+		function selectSlide(number){
+			myVideo.pause();
+			slides[slideIndex - 1].style.display = 'none';			
+			slideIndex = slideIndex + number;
+			if(slideIndex <= 0){slideIndex = slides.length;}
+			if(slideIndex > slides.length){slideIndex = 1;}
+			slides[slideIndex - 1].style.display = 'block';
+			if(slideIndex == slides.length){
+				myVideo.currentTime = 0;
+				myVideo.play();
+			}
+		}			
+		
 	</script>
 </BODY>
 </HTML>
