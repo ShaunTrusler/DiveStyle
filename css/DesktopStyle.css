@@ -1,0 +1,137 @@
+body{
+	background-color: #35a2c9;
+	font-family: 'Montserrat';
+	height: 75vh;
+}
+
+.header-bar{
+	display: flex;
+	height: 120px;
+	background-color: white;
+	justify-content: center;
+	align-items: center;
+
+}		
+
+.header-bar div{			
+	text-align: center;
+}
+
+.mylink{
+	padding: 20px;
+	width: 120px;
+}
+
+.mylink:hover{
+	background-color: #35a2c9;
+	border-radius: 20px 20px 20px 20px;
+}
+
+.logo{
+	height: 120px;
+}
+
+.partner-logo{
+	height: 50px;
+}
+
+.logoimage{
+	height: 100%;
+	text-align: center;
+}
+
+.content-block{
+	height: 100%;
+}
+
+.slideshow-contatiner{
+	position: relative;
+	display: block;
+	max-width: 1080px;;
+	height: 100%;
+	padding: 1%;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	object-fit: contain;
+
+}
+
+.slideshow{
+	position: relative;
+	height: 100%;
+	text-align: center;
+}
+
+
+.banners{
+	height: 100%;
+	width: 100%;
+	display: block;
+	object-fit: contain;			
+}
+
+#advid{
+	object-fit: contain;
+	margin-top: auto;
+	height: 100%;
+}
+
+.prev, .next{
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -50px;
+	color: white;
+	font-weight: bold;
+	font-size: 70px;
+	border-radius: 0 3px 3px 0;
+	z-index: 99;
+	
+}
+
+.prev{
+	left: 0;
+}
+
+.prev:hover{
+	color: #606b6f;
+}
+
+.next{
+	right: 0;
+}
+
+.next:hover{
+	color: #606b6f;
+}
+
+.overlay{
+	width: 100%;
+	object-fit: contain;
+	position: absolute;
+	bottom: 15px;
+	z-index: 99;			
+	color: white;
+	font-size: 55px;
+	text-align: center;			
+}
+
+.message{
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	font-weight: 900;
+	background: rgba(0, 0, 0, 0.0);
+}
+
+.link{
+	width: 25%;
+	color: #2b3031;;
+	font-size: 30px;
+	font-weight: 900;
+	margin-left: auto;
+	margin-right: auto;
+	background: rgba(255, 255, 0, 0.9);
+}
