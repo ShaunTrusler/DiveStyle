@@ -8,7 +8,7 @@
 	
 	<div class='header-bar'>
 		<div class='partner-logo'><img class='logoimage' src='media/logo/PADI_logo_300dpi_Hor_Trap_RGB.png'></div>
-		<div class='mylink'>ACADEMY</div>
+		<div class='mylink'><a href='academy.html'>ACADEMY</a></div>
 		<div class='mylink'>TRAVEL</div>
 		<div class='mylink'>TEAM</div>
 		<div class='logo'><a href='index.html'><img class='logoimage' src='media/logo/Logov2.jpg'></a></div>
@@ -83,7 +83,7 @@
 		var slides = document.getElementsByClassName('slideshow');
 		var myVideo = document.getElementById('advid');
 		showSlides();
-
+		var timer;
 
 		function showSlides(){
 			myVideo.pause();
@@ -97,7 +97,7 @@
 				myVideo.currentTime = 0;
 
 			}
-			setTimeout(showSlides, 20000);
+			timer = setTimeout(showSlides, 25000);
 		}
 
 		function selectSlide(number){
