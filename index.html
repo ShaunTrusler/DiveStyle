@@ -19,14 +19,13 @@
 
 		}		
 		
-		.header-bar div{
-			
+		.header-bar div{			
 			text-align: center;
 		}
 		
 		.mylink{
 			padding: 20px;
-			width: 100px;
+			width: 120px;
 		}
 		
 		.mylink:hover{
@@ -61,11 +60,13 @@
 			margin-left: auto;
 			margin-right: auto;
 			object-fit: contain;
-			
+
 		}
 		
 		.slideshow{
+			position: relative;
 			height: 100%;
+			text-align: center;
 		}
 		
 		
@@ -93,6 +94,7 @@
 			font-size: 70px;
 			border-radius: 0 3px 3px 0;
 			z-index: 99;
+			
 		}
 		
 		.prev{
@@ -109,6 +111,35 @@
 		
 		.next:hover{
 			color: #606b6f;
+		}
+		
+		.overlay{
+			width: 100%;
+			object-fit: contain;
+			position: absolute;
+			bottom: 15px;
+			z-index: 99;			
+			color: white;
+			font-size: 55px;
+			text-align: center;			
+		}
+		
+		.message{
+			margin-left: auto;
+			margin-right: auto;
+			width: 60%;
+			font-weight: 900;
+			background: rgba(0, 0, 0, 0.0);
+		}
+		
+		.link{
+			width: 25%;
+			color: #2b3031;;
+			font-size: 30px;
+			font-weight: 900;
+			margin-left: auto;
+			margin-right: auto;
+			background: rgba(255, 255, 0, 0.9);
 		}
 		
 	</style>
@@ -130,30 +161,58 @@
 		<div class='slideshow-contatiner'>
 			<div class='slideshow'>
 					<img class='banners' src='media/banners/StartYourAdventure_Social_1080x1080_11.jpg'>
+					<div class='overlay'>
+						<p class='message'>A NEW LIFESTYLE AWAITS</p>
+						<div class='link'>View Courses</div>
+					</div>
 			</div>
 			<div class='slideshow'>
 					<img class='banners' src='media/banners/Palau05IMG_0228.jpg'>
+					<div class='overlay'>
+						<p class='message'>CHANGE YOUR LIFESTYLE</BR>CHOOSE A DIVESTYLE</p>
+						<div class='link'>View Trips</div>
+					</div>
 			</div>
 			<div class='slideshow'>
 				<img class='banners' src='media/banners/StartYourAdventure_Social_1080x1080_21.jpg'>
+				<div class='overlay'>
+						<p class='message'>A NEW LIFESTYLE AWAITS</p>
+						<div class='link'>View Courses</div>
+					</div>
 			</div>
 			<div class='slideshow'>
 				<img class='banners' src='media/banners/Bahamas09_2575.jpg'>
+				<div class='overlay'>
+						<p class='message'>CHANGE YOUR LIFESTYLE</BR>CHOOSE A DIVESTYLE</p>
+						<div class='link'>View Trips</div>
+					</div>
 			</div>
 			<div class='slideshow'>
 				<img class='banners' src='media/banners/StartYourAdventure_Social_1080x1080_31.jpg'>
+				<div class='overlay'>
+						<p class='message'>A NEW LIFESTYLE AWAITS</p>
+						<div class='link'>View Courses</div>
+					</div>
 			</div>
 			<div class='slideshow'>
 				<img class='banners' src='media/banners/375A5776.png'>
+				<div class='overlay'>
+						<p class='message'>CHANGE YOUR LIFESTYLE</BR>CHOOSE A DIVESTYLE</p>
+						<div class='link'>View Trips</div>
+					</div>
 			</div>
 			<div class='slideshow'>
 				<img class='banners' src='media/banners/StartYourAdventure_Social_1080x1080_41.jpg'>
+				<div class='overlay'>
+						<p class='message'>A NEW LIFESTYLE AWAITS</p>
+						<div class='link'>View Courses</div>
+					</div>
 			</div>
 			<div class='slideshow'>
 				<video id='advid' class='banners' controls><source src='media/banners/Start Your Adventure 2020-Warm_15sec.mp4'></video>
 			</div>
 			<a class="prev" onclick="selectSlide(-1)">&#10094;</a>
-			<a class="next" onclick="selectSlide(1)">&#10095;</a>
+			<a class="next" onclick="selectSlide(1)">&#10095;</a>			
 		</div>
 		
 		
