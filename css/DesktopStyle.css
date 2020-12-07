@@ -49,6 +49,7 @@ body{
 
 .content-block{
 	height: 100%;
+	text-align: center;
 }
 
 .slideshow-contatiner{
@@ -71,7 +72,7 @@ body{
 }
 
 
-.banners{
+.digital-adverts{
 	height: 100%;
 	width: 100%;
 	display: block;
