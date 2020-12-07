@@ -33,7 +33,17 @@
 		.link-button{
 			background: rgba(255, 255, 0, 0.9);
 			padding: 20px;
-			
+			font-size: 20px;
+			font-weight: 900;
+			color: black;
+		}
+		
+		.link-button:hover{
+			cursor: pointer;
+		}
+		
+		.content-card a{
+			text-decoration: none;
 		}
 		
 		.banner-txt{
@@ -41,6 +51,48 @@
 			color: white;
 			font-size: 45px;
 			font-weight: 900;
+		}
+		
+		.course-description{
+			font-size: 20px;
+			font-weight: 900;
+			height: 50px;
+		}
+		
+		.modal{
+			display: none;
+			position: fixed;
+			z-index: 1;
+			padding: 50px;			
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			background-color: rgb(0,0,0);
+			background-color: rgba(0,0,0,0.4);
+		}
+		
+		.modal-content{
+			background-color: #fefefe;
+			margin: auto;
+			padding: 20px;
+			border: 1px solid #888;
+			width: 70%;
+			text-align: center;
+		}
+		
+		.close {
+			color: #aaaaaa;
+			float: right;
+			font-size: 28px;
+			font-weight: bold;
+		}
+		
+		.close:hover, .close:focus {
+			color: #000;
+			text-decoration: none;
+			cursor: pointer;
 		}
 		
 	</style>
@@ -63,47 +115,151 @@
 		<div class='courses'>
 			<div class='content-card'>
 				<img class='image-banner' src='media/courses/DSD-OnlineBanners_EN_1.jpg'>
-				<p>PADI Discover Scbuba Diving</p>
-				<div class='link-button'>More Info</div>
+				<p class='course-description'>PADI Discover Scbuba Diving</p>
+				<div class='link-button' onclick='showModal("DSD-Modal")'>More Info</div>
 			</div>
 		
 			<div class='content-card'>
 				<img class='image-banner' src='media/courses/OW-OnlineBanners_EN_1.jpg'>
-				<p>PADI Open Water Course</p>
-				<div class='link-button'>More Info</div>
+				<p class='course-description'>PADI Open Water Course</p>
+				<div class='link-button' onclick='showModal("OW-Modal")'>More Info</div>
 			</div>
 		</div>
 		<div class='courses'><p class='banner-txt'>YOUR DIVESTLYE CONTINUES</p>
 			<div class='content-card'>
 				<img class='image-banner' src='media/courses/AOW-OnlineBanners_EN_1.jpg'>
-				<p>PADI Advanced Open Water Course</p>
-				<div class='link-button'>More Info</div>
+				<p class='course-description'>PADI Advanced Open Water Course</p>
+				<div class='link-button' onclick='showModal("AOW-Modal")'>More Info</div>
 			</div>
 			
 			<div class='content-card'>
 				<img class='image-banner' src='media/courses/Rescue-OnlineBanners_EN_1.jpg'>
-				<p>PADI Rescue Diver Course</p>
-				<div class='link-button'>More Info</div>			
+				<p class='course-description'>PADI Rescue Diver Course</p>
+				<div class='link-button'>More Info</div>		
 			</div>
 		</div>
 		<div class='courses'><p class='banner-txt'>PREPARE FOR YOUR NEW DIVESTYLE</p>
 			<div class='content-card'>
 				<img class='image-banner' src='media/courses/ReActivate - OnlineBanners_EN_rev11.17.jpg'>
-				<p>PADI ReActivate</p>
+				<p class='course-description'>PADI ReActivate</p>
 				<div class='link-button'>More Info</div>
 			</div>
 			<div class='content-card'>
 				<img class='image-banner' src='media/courses/EFR-Logo.jpg'>
-				<p>Emergency First Response</p>
+				<p class='course-description'>Emergency First Response</p>
 				<div class='link-button'>More Info</div>
 			</div>
 		</div>
-	</div class='modal'>
-		<div class='OW-modal'>
+	</div>
+	
+	<div id="DSD-Modal" class="modal">		
+		<div class="modal-content">
+				<span onclick="hideModal('DSD-Modal')" class="close">&times;</span>
+			<p><h1>PADI DISCOVER SCUBA DIVING</h1></p>
+			<img src="media/courses/DSD-OnlineBanners_EN_4.jpg" height='300px'>
+			</br></br>
+					<p>PADI Discover Scuba Diving course, is a guided underwater experience for those or would like to try out Scuba Diving and the feeling of being an AquaNaught, but are not ready to take the plunge and purchase/do a full course.</br>
+					The PADI Discover Scuba Diving is a great way to get your feet wet before you make the decision to be a fully qualified Scuba Diver.</br></br>
+					Total Price for the Experience: <b>R200pp</b></br></br>
+					Experience BreakDown. What you need and what you will be doing:</br>
+					<b>WHAT YOU WILL BE DOING:</b></br>
+					•	On the day there will be a small introduction to the Scuba equipment that you will use, and then it is into the water for some fun and relaxation.</br>
+					•	You will get to experience what it is like to be weightless underwater and how fun and relaxing the underwater word can be.</br></br>
+					Total Experience duration: 1-2 hours</br></br>
+					<b>WHAT YOU WIL NEED</b></br>
+					•	All you will need for this Scuba Experience is to bring your swimming costume and a towel, and pitch up on the day.</br>  
+					Please note that this is experience does not make you a qualified Scuba diver, instead this is just for you to feel and experience Scuba diving before you make the purchase of a full Scuba Diving Course.</br></br>
+					</p>
 		</div>
 	</div>
+	
+	<div id="OW-Modal" class="modal">
+ 		<div class="modal-content">
+    			<span onclick="hideModal('OW-Modal')" class="close">&times;</span>
+			<p><h1>PADI OPEN WATER SCUBA DIVER</h1></p>
+			<img src="media/courses/OW-OnlineBanners_EN_4.jpg" height='300'>
+			</br></br>			
+    			<p>PADI Open Water Diver Course is the first full Scuba Diving qualification and will allow you and your buddy to start your journey as a fully fledged PADI Scuba Diver.</br>
+				Once you have completed this course, you will start to plan your holidays around the beautiful Dive Sites and Reefs around the globe, all there waiting for you to see and experience.</br></br>
+				Total Price for the Open Water Course: <b>R5930pp excluding SoftGear Purchases</b></br></br>
+				Course Breakdown. What you need and what you will be doing:</br></br>				
+					<b>WHAT YOU WILL BE DOING</b></br>
+					To become a qualified PADI Scuba diver you will need to complete 3 sections, and will usually take around 2 Weeks to complete.</br>
+				•	Section 1: PADI Open Water Diver Theory and Exam (Digital).</br>
+				•	Section 2: Confined Water (Pool) skills</br>
+				•	Section 3: Open Water (Lake/Ocean) skills</br></br>
+				•	Week 1: In the first week we will have an introduction to PADI and the PADI Open Water Diver Course. You will need to start and complete the first few sections of the Open Water Diver course material.</br>
+				•	Week 1 – Weekend: On the first weekend of your course, after you have completed the first few sections of the Open Water Diver Course Material, we will climb into a pool and learn to do the skills that were covered in the course material. The Pool sessions run over both Saturday and Sunday of the weekend.</br>
+				•	Week 2: The last week will be used to finish up the course material, explain anything that is not understood as well and write the exams.</br>
+				•	Week 2 – weekend: The last weekend is when we will be going to a dive lake or the ocean to complete the final dives as well as to certify you as a PADI Open Water Scuba Diver. The Weekend will include both Saturday and Sunday.</br></br>
+				<b>WHAT YOU WILL NEED</b></br>
+					For hygiene and health and safety reasons, it is required that each Student purchases/provides their own <b>Soft Gear</b> for the course, this includes:</br>
+				•	Wetsuit/Exposure Suit</br>
+				•	Diving Mask</br>
+				•	Snorkel</br>
+				•	Weight belt</br>
+				•	Diving Fins</br>
+				•	Diving Boots</br></br>
+					For the duration of the course, you will be able to use the <b>Hard Gear</b> provided by us, this includes:</br>
+				•	Scuba BCD (Buoyancy Compensation Device)</br>
+				•	Primary Regulator</br>
+				•	Alternate Regulator</br>
+				•	Cylinder</br></br>
+					</p>
+		</div>
+	</div>
+	
+	<div id="AOW-Modal" class="modal">
+ 		<div class="modal-content">
+    			<span onclick="hideModal('AOW-Modal')" class="close">&times;</span>
+			<p><h1>PADI ADVANCED OPEN WATER SCUBA DIVER</h1></p>
+			<img src="media/courses/AOW-OnlineBanners_EN_4.jpg" height="300">
+			</br></br>
+    			<p>PADI Advanced Open Water Diver course allows you to experience the different offerings the underwater world has to offer. Ever wanted to see a shipwreck underwater, or dive at night to see how different the underwater life behaves? The Advanced Open Water course is designed to help you improve your knowledge and skills underwater as well as try a few new experiences.</br>
+				You will need to have a PADI OPEN WATER certification to complete this course. This course can be completed straight after you have qualified as a PADI OPEN WATER DIVER</br></br>
+				Total Course Price: <b>R5230pp excluding SoftGear Purchases</b></br></br>
+				Course Breakdown. What you need and what you will be doing:</br></br>				
+					<b>WHAT YOU WILL BE DOING</b></br>
+					To Qualify as a PADI Advanced Open Water diver you will need to complete 5 dives and will usually take place over 1 week:</br>
+				•	Dive 1: Dive to a depth beyond 18m</br>
+				•	Dive 2: Underwater navigation</br>
+				•	Dive 3/4/5: Any 3 Adventure diving experiences of your choice from a whole list to choose from: some examples are – Wreck/Night/Drift Diver/Peak Performance Buoyancy/Underwater Photography, ect.</br></br>
+				•	Week 1: In the first week you will complete the PADI Adventures in diving course material</br>
+				•	Weekend: Over the weekend we will go to the dive site and complete the 5 adventure dives that were discussed, and you will be qualified as a PADI Advanced Open Water Scuba Diver</br></br>
+				<b>WHAT YOU WILL NEED</b></br>
+					For hygiene and health and safety reasons, it is required that each Student purchases/provides their own <b>Soft Gear</b> for the course, this includes:</br>
+				•	Wetsuit/Exposure Suit</br>
+				•	Diving Mask</br>
+				•	Snorkel</br>
+				•	Weight belt</br>
+				•	Diving Fins</br>
+				•	Diving Boots</br></br>
+					For the duration of the course, you will be able to use the <b>Hard Gear</b> provided by us, this includes:</br>
+				•	Scuba BCD (Buoyancy Compensation Device)</br>
+				•	Primary Regulator</br>
+				•	Alternate Regulator</br>
+				•	Cylinder</br></br>				
+			</p>
+		</div>
+	</div>
+	
 	<script>
-			
+		//show modal
+		function showModal(id){
+			document.getElementById(id).style.display = "block";
+		}
+		
+		//hide modal
+		function hideModal(id){
+			document.getElementById(id).style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		  if (event.target == modal) {
+		    hideModal('DSD-Modal');
+		  }
+		}	
 	</script>
 </BODY>
 </HTML>

@@ -123,7 +123,12 @@ body{
 	z-index: 99;			
 	color: white;
 	font-size: 55px;
-	text-align: center;			
+	text-align: center;	
+	
+}
+
+.overlay a{
+	text-decoration: none;	
 }
 
 .message{
@@ -136,10 +141,11 @@ body{
 
 .link{
 	width: 25%;
-	color: #2b3031;;
+	color: #2b3031;
 	font-size: 30px;
 	font-weight: 900;
 	margin-left: auto;
 	margin-right: auto;
 	background: rgba(255, 255, 0, 0.9);
+	
 }
