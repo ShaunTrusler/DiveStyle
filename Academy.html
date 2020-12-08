@@ -42,6 +42,20 @@
 			cursor: pointer;
 		}
 		
+		.dropdown{
+			display: none;
+			position: absolute;
+			top: 100px;
+			background-color: white;
+			box-shadow: 5px 0px 20px 1px #5e696b;
+		}
+		
+		.dropdownbtn:hover .dropdown{
+			display: block;
+		}
+		
+		
+		
 		.content-card a{
 			text-decoration: none;
 		}
@@ -105,7 +119,13 @@
 	
 	<div class='header-bar'>
 		<div class='partner-logo'><img class='logoimage' src='media/logo/PADI_logo_300dpi_Hor_Trap_RGB.png'></div>
-		<div class='mylink'>ACADEMY</div>
+		<div class='mylink dropdownbtn'>ACADEMY
+			<div class='dropdown'>
+				<div class='mylink'><a href='academy.html#Start'>Start your new Divestyle journey</a></div>
+				<div class='mylink'><a href='academy.html#Con-ed'>Continue your Divestyle journey</a></div>
+				<div class='mylink'><a href='academy.html#Prep'>Prepare for your Divesyle</a></div>
+			</div>
+		</div>
 		<div class='mylink'>TRAVEL</div>
 		<div class='mylink'>TEAM</div>
 		<div class='logo'><a href='index.html'><img class='logoimage' src='media/logo/Logov2.jpg'></a></div>
@@ -115,7 +135,7 @@
 		<div class='partner-logo'><img class='logoimage' src='media/logo/EFR-Logo.jpg'></div>
 	</div>
 	
-	<div class='content-block'><p class='banner-txt'>YOUR NEW DIVESTLYE STARTS HERE</p>
+	<div id='Start'class='content-block'><p class='banner-txt'>YOUR NEW DIVESTLYE STARTS HERE</p>
 		<div class='courses'>
 			<div class='content-card'>
 				<img class='image-banner' src='media/courses/DSD-OnlineBanners_EN_1.jpg'>
@@ -129,7 +149,7 @@
 				<div class='link-button' onclick='showModal("OW-Modal")'>More Info</div>
 			</div>
 		</div>
-		<div class='courses'><p class='banner-txt'>YOUR DIVESTLYE CONTINUES</p>
+		<div id='Con-ed'class='courses'><p class='banner-txt'>YOUR DIVESTLYE CONTINUES</p>
 			<div class='content-card'>
 				<img class='image-banner' src='media/courses/AOW-OnlineBanners_EN_1.jpg'>
 				<p class='course-name'>PADI Advanced Open Water Course</p>
@@ -142,7 +162,7 @@
 				<div class='link-button'>More Info</div>		
 			</div>
 		</div>
-		<div class='courses'><p class='banner-txt'>PREPARE FOR YOUR NEW DIVESTYLE</p>
+		<div id='Prep'class='courses'><p class='banner-txt'>PREPARE FOR YOUR NEW DIVESTYLE</p>
 			<div class='content-card'>
 				<img class='image-banner' src='media/courses/ReActivate - OnlineBanners_EN_rev11.17.jpg'>
 				<p class='course-name'>PADI ReActivate</p>
@@ -219,7 +239,7 @@
 			<p><h1>PADI ADVANCED OPEN WATER SCUBA DIVER</h1></p>
 			<img src="media/courses/AOW-OnlineBanners_EN_4.jpg" height="300">
 			</br></br>
-    			<p class='course-desription'>PADI Advanced Open Water Diver course allows you to experience the different offerings the underwater world has to offer. Ever wanted to see a shipwreck underwater, or dive at night to see how different the underwater life behaves? The Advanced Open Water course is designed to help you improve your knowledge and skills underwater as well as try a few new experiences.</br>
+    			<p class='course-desription'>PADI Advanced Open Water Diver course allows you to experience the different offerings of the underwater world. Ever wanted to see a shipwreck underwater, or dive at night to see how different the underwater life behaves? The Advanced Open Water course is designed to help you improve your knowledge and skills underwater as well as try a few new experiences.</br>
 				You will need to have a PADI OPEN WATER certification to complete this course. This course can be completed straight after you have qualified as a PADI OPEN WATER DIVER</br></br>
 				Total Course Price: <b>R5230pp excluding SoftGear Purchases</b></br></br>
 				Course Breakdown. What you need and what you will be doing:</br></br>				
