@@ -2,12 +2,15 @@
 <HTML>
 <HEAD>
 	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-	<link href='css/DesktopStyle.css' rel='stylesheet'>
-	
+	<link href='css/DesktopStyle.css' rel='stylesheet'>	
+	<script src='js/lazyLoad.js'></script>
 	<style>
-		
+		iframe{
+			width: 100%;
+			height: 700px;
+			border: none;
+		}
 	</style>
-	
 </HEAD>
 <BODY>
 	
@@ -32,10 +35,52 @@
 	<div id='Start'class='content-block'>
 		<div class='travel'><p class='banner-txt'>Living the DiveStyle</p>
 			<div class='content-card'>
-				<img class='image-banner' src='media/courses/DSD-OnlineBanners_EN_1.jpg'>
+				<img class='image-banner' src='albums/Maritius-Dec2019/Thumbnail-GOPR2507.png'>
 				<p class='trip-name'>Mauritius December 2019</p>
-				<div class='link-button'>View Trip</div>
-			</div>					
+				<div class='link-button' onclick='showModal("Mau2019")'>View Trip</div>
+			</div>
+			<div class='content-card'>
+				<img class='image-banner' src='albums/Aliwal-Aug2020/WhatsApp Image 2020-08-22 at 16.24.20.jpeg'>
+				<p class='trip-name'>Aliwal-Shoal July 2020</p>
+				<div class='link-button' onclick='showModal("Aliwal-July2020")'>View Trip</div>
+			</div>
 		</div>
 	</div>
+	
+	<div id="Mau2019" class="modal">		
+		<div class="modal-content">
+				<span onclick="hideModal('Mau2019')" class="close">&times;</span>
+			<p><h1>Mauritius - December 2019</h1></p>			
+			</br></br>
+					<iframe class='lazy' data-src='albums/Maritius-Dec2019/mau2019.html'></iframe>
+		</div>
+	</div>
+	
+	<div id="Aliwal-July2020" class="modal">		
+		<div class="modal-content">
+				<span onclick="hideModal('Aliwal-July2020')" class="close">&times;</span>
+			<p><h1>Aliwal-Shoal July 2020</h1></p>			
+			</br></br>
+					<iframe class='lazy' data-src='albums/Aliwal-Aug2020/ali-jul2020.html'></iframe>
+		</div>
+	</div>
+	
+	<script>
+		//show modal
+		function showModal(id){
+			document.getElementById(id).style.display = "block";
+		}
+		
+		//hide modal
+		function hideModal(id){
+			document.getElementById(id).style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		  if (event.target == modal) {
+		    hideModal('DSD-Modal');
+		  }
+		}	
+	</script>
 </BODY>

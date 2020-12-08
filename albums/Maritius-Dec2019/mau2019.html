@@ -1,0 +1,423 @@
+<!DOCTYPE=html>
+<html>
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<link href='../../css/DesktopStyle.css' rel='stylesheet'>
+	<script src='../../js/lazyLoad.js'></script>
+  <style>
+	 
+	body{
+		background-color: white;
+	 }
+	  
+    	.album{
+		background-color: white;		
+		text-align: center;
+	}
+	  
+	.thumbnail{
+		background-color: white;
+		/*padding: 20px;*/
+		margin-top: 20px;
+		margin-left: 50px;
+		width: 100px;
+		box-shadow: 5px 5px 10px #2e5467;
+		text-align: center;
+		display: inline-block;
+	}
+	
+	.cursor{
+		cursor: pointer; 
+	}
+	
+	.modal_image {
+		  display: none; /* Hidden by default */
+		  position: fixed; /* Stay in place */
+		  z-index: 1; /* Sit on top */
+		  left: 0;
+		  top: 0;
+		  padding-top: 10px;
+		  width: 100%; /* Full width */
+		  /*height: 100%; /* Full height */
+		  overflow: auto; /* Enable scroll if needed */
+		  background-color: rgb(0,0,0); /* Fallback color */
+		  background-color: rgba(0,0,0,0); /* Black w/ opacity */
+	}
+	  
+	.modal_image-content {
+		  background-color: #fefefe;
+		  margin: 2% auto; /* 15% from the top and centered */
+		  padding: 20px;
+		  border: 1px solid #888;
+		  width: 75%; /* Could be more or less, depending on screen size */
+		  background-color: rgba(0,0,0,0.7);
+	}
+	.album_slideshow{
+		display: none;
+  	}
+	  
+  </style>
+</head>
+<body>
+    	<div class="album">		
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2147.png" style="width:100%" onclick="showSlides(0)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2149.png" style="width:100%" onclick="showSlides(1)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2152.png" style="width:100%" onclick="showSlides(2)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2163.png" style="width:100%" onclick="showSlides(3)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2170.png" style="width:100%" onclick="showSlides(4)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2187.png" style="width:100%" onclick="showSlides(5)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2199.png" style="width:100%" onclick="showSlides(6)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2200.png" style="width:100%" onclick="showSlides(7)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2205.png" style="width:100%" onclick="showSlides(8)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2219.png" style="width:100%" onclick="showSlides(9)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2223.png" style="width:100%" onclick="showSlides(10)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2226.png" style="width:100%" onclick="showSlides(11)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2227.png" style="width:100%" onclick="showSlides(12)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2228.png" style="width:100%" onclick="showSlides(13)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2231.png" style="width:100%" onclick="showSlides(14)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2256.png" style="width:100%" onclick="showSlides(15)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2258.png" style="width:100%" onclick="showSlides(16)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2273.png" style="width:100%" onclick="showSlides(17)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2275.png" style="width:100%" onclick="showSlides(18)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2277.png" style="width:100%" onclick="showSlides(19)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2278.png" style="width:100%" onclick="showSlides(20)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2279.png" style="width:100%" onclick="showSlides(21)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2280.png" style="width:100%" onclick="showSlides(22)">
+		</div>		
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2296.png" style="width:100%" onclick="showSlides(23)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2301.png" style="width:100%" onclick="showSlides(24)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2302.png" style="width:100%" onclick="showSlides(25)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2305.png" style="width:100%" onclick="showSlides(26)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2306.png" style="width:100%" onclick="showSlides(27)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2307.png" style="width:100%" onclick="showSlides(28)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2310.png" style="width:100%" onclick="showSlides(29)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2319.png" style="width:100%" onclick="showSlides(30)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2322.png" style="width:100%" onclick="showSlides(31)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2326.png" style="width:100%" onclick="showSlides(32)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2327.png" style="width:100%" onclick="showSlides(33)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2328.png" style="width:100%" onclick="showSlides(34)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2329.png" style="width:100%" onclick="showSlides(35)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2330.png" style="width:100%" onclick="showSlides(36)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2331.png" style="width:100%" onclick="showSlides(37)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2333.png" style="width:100%" onclick="showSlides(38)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2387.png" style="width:100%" onclick="showSlides(39)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2408.png" style="width:100%" onclick="showSlides(40)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2412.png" style="width:100%" onclick="showSlides(41)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2480.png" style="width:100%" onclick="showSlides(42)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2481.png" style="width:100%" onclick="showSlides(43)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2482.png" style="width:100%" onclick="showSlides(44)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2483.png" style="width:100%" onclick="showSlides(45)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2494.png" style="width:100%"  onclick="showSlides(46)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2497.png" style="width:100%" onclick="showSlides(47)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2501.png" style="width:100%" onclick="showSlides(48)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2503.png" style="width:100%" onclick="showSlides(49)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2507.png" style="width:100%" onclick="showSlides(50)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2509.png" style="width:100%" onclick="showSlides(51)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2511.png" style="width:100%" onclick="showSlides(52)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2516.png" style="width:100%" onclick="showSlides(53)">
+		</div>
+		<div class="cursor thumbnail">
+		  <img src="Thumbnail-GOPR2287.png" style="width:100%" onclick="showSlides(54)">
+		</div>
+    	</div>						    
+						    
+	<div id="Album_modal" class="modal_image">
+ 		<div class="modal_image-content" style="text-align: center">
+    			<span onclick="hideModal('Album_modal')" class="close">&times;</span>						
+			<div class="album_slideshow">
+				<img src="GOPR2147.JPG" style="width:75%">						    
+			</div>
+			<div class="album_slideshow">
+				<img class='lazy' data-src="GOPR2149.JPG" style="width:75%">						    
+		 	</div>
+			<div class="album_slideshow">
+				<img class='lazy' data-src="GOPR2152.JPG" style="width:75%">						    
+			</div>
+			<div class="album_slideshow">
+				<img class='lazy' data-src="GOPR2163.JPG" style="width:75%">						    
+			</div>
+			<div class="album_slideshow">
+				<img class='lazy' data-src="GOPR2170.JPG" style="width:75%">						    
+			</div>
+			<div class="album_slideshow">
+				<img class='lazy' data-src="GOPR2187.JPG" style="width:75%">						    
+			</div>
+			<div class="album_slideshow">
+				<img class='lazy' data-src="GOPR2199.JPG" style="width:75%">						    
+			</div>
+			<div class="album_slideshow">
+				<img class='lazy' data-src="GOPR2200.JPG" style="width:75%">						    
+			</div>
+			<div class="album_slideshow">
+				<img class='lazy' data-src="GOPR2205.JPG" style="width:75%">						    
+		 	</div>
+			<div class="album_slideshow">
+				<img class='lazy' data-src="GOPR2219.JPG" style="width:75%">						    
+			</div>
+			<div class="album_slideshow">
+				<img class='lazy' data-src="GOPR2223.JPG" style="width:75%">						    
+			</div>
+			<div class="album_slideshow">
+				<img class='lazy' data-src="GOPR2226.JPG" style="width:75%">						    
+			</div>
+			<div class="album_slideshow">
+				<img class='lazy' data-src="GOPR2227.JPG" style="width:75%">						    
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2228.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2231.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2256.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2258.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2273.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2275.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2277.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2278.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2279.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2280.JPG" style="width:75%">
+			</div>			
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2296.JPG" style="width:100%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2301.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2302.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2305.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2306.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2307.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2310.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2319.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2322.JPG" style="width:75%">
+			</div>								  
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2326.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2327.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2328.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2329.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2330.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2331.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2333.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2387.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2408.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2412.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2480.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2481.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2482.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2483.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2494.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2497.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2501.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2503.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2507.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2509.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2511.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2516.JPG" style="width:75%">
+			</div>
+			<div class="album_slideshow">
+			  <img class='lazy' data-src="GOPR2287.JPG" style="width:75%">
+			</div>
+			</br></br>
+								  
+		</div>
+	</div>
+<script>
+	//show modal
+		function Show_Image(id){
+			document.getElementById(id).style.display = "block";
+		}
+		
+		//hide modal
+		function hideModal(id){
+			document.getElementById(id).style.display = "none";
+		}
+		
+		function showSlides(number){
+		  	var slides = document.getElementsByClassName("album_slideshow");
+			for (i = 0; i < slides.length; i++) {
+   				slides[i].style.display = "none";
+ 			 }										      
+		   	slides[number].style.display = "block";
+			document.getElementById('Album_modal').style.display = "block";
+	  	}
+</script>									 
+</body>
+</html>
