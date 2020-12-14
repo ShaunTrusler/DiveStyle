@@ -1,0 +1,80 @@
+<!doctype HTML>
+<HTML>
+<HEAD>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<link href='css/DesktopStyle.css' rel='stylesheet'>	
+</HEAD>
+<BODY>
+	
+	<div class='header-bar'>
+		<div class='partner-logo'><img class='logoimage' src='media/logo/PADI_logo_300dpi_Hor_Trap_RGB.png'></div>
+		<div class='mylink dropdownbtn'><a href='Academy.html'>ACADEMY</a>
+			<div class='dropdown'>
+				<div class='mylink'><a href='academy.html#Start'>Start your new Divestyle journey</a></div>
+				<div class='mylink'><a href='academy.html#Con-ed'>Continue your Divestyle journey</a></div>
+				<div class='mylink'><a href='academy.html#Prep'>Prepare for your Divesyle</a></div>
+			</div>
+		</div>
+		<div class='mylink'>TRAVEL</div>
+		<div class='mylink'>TEAM</div>
+		<div class='logo'><a href='index.html'><img class='logoimage' src='media/logo/Logov2.jpg'></a></div>
+		<div class='mylink'><a href='calendar.html'>CALENDAR</a></div>
+		<div class='mylink'>ABOUT US</div>
+		<div class='mylink'><a href='contact.html'>CONTACT US</a></div>
+		<div class='partner-logo'><img class='logoimage' src='media/logo/EFR-Logo.jpg'></div>
+	</div>
+	
+	<div id='Start'class='content-block'>
+		<div class='travel'><p class='banner-txt'>YOUR DIVESTYLE STARTS NOW</p>
+			<div class='content-card'>				
+				<p class='trip-name'>Drop us an email if you have any questions regarding your new DiveStyle</p>
+				<div class='link-button'><a href='mailto:info@DiveStyle.co.za'>Info@DiveStyle.co.za</a></div>
+			</div>
+			
+			<div class='content-card'>				
+				<p class='trip-name'>Give us a call and we will be happy to talk you into why a DiveStyle is the Best LifeStyle</p>
+				<div class='link-button' onclick='formSubmit()'>012 345 6789</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id='Start'class='content-block'>
+		<div class='travel'><p id='message' class='banner-txt'>COMPLETE TEH FORM AND SOMEONE WILL CONTACT YOU</p>
+			<div class='content-card'>				
+				<form onsubmit='formSubmit'>
+					<div class="info">
+					<input class="fname" type="text" name="name" placeholder="Full name">
+					<input type="text" name="name" placeholder="Email">
+					<input type="text" name="name" placeholder="Phone number">
+					</div>
+					<p>Message</p>
+					<div>
+					<textarea rows="4"></textarea>
+					</div>
+					<button type="submit">Submit</button>
+				</form>
+			</div>					
+		</div>
+	</div>
+	
+	<script>
+		function formSubmit(){
+			var http = new XMLHttpRequest();
+			var url = 'https://script.google.com/macros/s/AKfycbxblP1vPD2c-2E0xDtiFuedSPdUxVSuTwPyn5udl3nWjK_Ydls/exec';
+			var params = 'fname=Shaun&email=shaun@gmail&message=I would like to enquire';
+			http.open('POST', url, true);
+
+			
+			http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+			http.onreadystatechange = function() {
+				if(http.readyState == 4 && http.status == 200) {
+					alert('Form Submitted');
+				}
+			}
+			http.send(params);
+			alert('Thank you. Someone will be in contact with you shortly');
+		}
+	</script>
+</BODY>
+</HTML>
