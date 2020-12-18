@@ -3,6 +3,53 @@
 <HEAD>
 	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 	<link href='css/DesktopStyle.css' rel='stylesheet'>	
+	
+	<style>
+		.contact-card{
+			display: inline-block;
+			background-color: white;			
+			width: 400px;
+			box-shadow: 5px 0px 20px 1px #5e696b;
+		}
+		
+		.contact-info{
+			padding: 5px;
+		}
+		
+		.info{
+			display: inline-block;
+			text-align: center;
+			width: 600px;
+			height: 400px;
+			background-color: white;
+			
+		}
+		
+		.input{
+			display: inline-block;
+			width: 560px;
+			padding: 10px;
+			margin: 5px;
+			background-color: light-grey;
+			border: 1px #35a2c9 solid;
+			box-shadow: 0px 0px 5px 0px #5e696b;
+		}
+		
+		.message-block{			
+			height: 180px;
+			width: 560px;
+			padding: 10px;
+			margin: 5px;
+			background-color: liht-grey;
+			border: 1px #35a2c9 solid;
+			box-shadow: 0px 0px 5px 0px #5e696b;
+		}
+		
+		.submitButton{
+			
+		}
+	
+	</style>
 </HEAD>
 <BODY>
 	
@@ -26,32 +73,27 @@
 	
 	<div id='Start'class='content-block'>
 		<div class='travel'><p class='banner-txt'>YOUR DIVESTYLE STARTS NOW</p>
-			<div class='content-card'>				
-				<p class='trip-name'>Drop us an email if you have any questions regarding your new DiveStyle</p>
+			<div class='contact-card'>				
+				<p class='contact-info'>Drop us an email if you have any questions regarding your new DiveStyle</p>
 				<div class='link-button'><a href='mailto:info@DiveStyle.co.za'>Info@DiveStyle.co.za</a></div>
 			</div>
 			
-			<div class='content-card'>				
-				<p class='trip-name'>Give us a call and we will be happy to talk you into why a DiveStyle is the Best LifeStyle</p>
-				<div class='link-button' onclick='formSubmit()'>012 345 6789</div>
+			<div class='contact-card'>				
+				<p class='contact-info'>Give us a call and we will be happy to talk you into why a DiveStyle is the Best LifeStyle</p>
+				<div class='link-button' >012 345 6789</div>
 			</div>
 		</div>
-	</div>
-	
-	<div id='Start'class='content-block'>
-		<div class='travel'><p id='message' class='banner-txt'>COMPLETE TEH FORM AND SOMEONE WILL CONTACT YOU</p>
-			<div class='content-card'>				
-				<form onsubmit='formSubmit'>
-					<div class="info">
-					<input class="fname" type="text" name="name" placeholder="Full name">
-					<input type="text" name="name" placeholder="Email">
-					<input type="text" name="name" placeholder="Phone number">
-					</div>
-					<p>Message</p>
+		
+		<div><p id='message' class='banner-txt'>ALTERNATIVELY</br>COMPLETE THE FORM AND SOMEONE WILL GET IN TOUCH WITH YOU</p>
+			<div class="info">				
+				<form onsubmit='formSubmit()' method='post'>
 					<div>
-					<textarea rows="4"></textarea>
+						<input class="input" type="text" name="name" placeholder="Full name" required>
+						<input class="input" type="text" name="email" placeholder="Email" required>
+						<input class="input" type="text" name="phone" placeholder="Phone number" required>
+						<textarea class='message-block' rows="4" placeholder="Message" name='enquiry' required></textarea>
 					</div>
-					<button type="submit">Submit</button>
+					<button type='submit' class='submitButton'>SUBMIT</button>
 				</form>
 			</div>					
 		</div>
@@ -61,7 +103,11 @@
 		function formSubmit(){
 			var http = new XMLHttpRequest();
 			var url = 'https://script.google.com/macros/s/AKfycbxblP1vPD2c-2E0xDtiFuedSPdUxVSuTwPyn5udl3nWjK_Ydls/exec';
-			var params = 'fname=Shaun&email=shaun@gmail&message=I would like to enquire';
+			var name = document.getElementsByName('name').value;
+			var email = document.getElementsByName('email').value;
+			var phone = document.getElementsByName('phone').value;
+			var enquiry = document.getElementsByName('enquiry').value;
+			var params = 'fname=' + name + '&email=' + email + '&message=' + enquiry;
 			http.open('POST', url, true);
 
 			
