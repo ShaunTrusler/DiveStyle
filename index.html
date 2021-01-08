@@ -3,9 +3,9 @@
 <HEAD>
 	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 	<link href='css/DesktopStyle.css' rel='stylesheet'>
+	<script src='js/Javascript.js'></script>
 </HEAD>
-<BODY>
-	
+<BODY onload='showSlides()'>	
 	<div class='header-bar'>
 		<div class='partner-logo'><img class='logoimage' src='media/logo/PADI_logo_300dpi_Hor_Trap_RGB.png'></div>
 		<div class='mylink dropdownbtn'><a href='Academy.html'>ACADEMY</a>
@@ -84,40 +84,5 @@
 		
 		
 	</div>
-	<script>
-		var slideIndex = 0;
-		var slides = document.getElementsByClassName('slideshow');
-		var myVideo = document.getElementById('advid');
-		showSlides();
-		var timer;
-
-		function showSlides(){
-			myVideo.pause();
-			for(i = 0; i < slides.length; i++){
-				slides[i].style.display = 'none';
-			}
-			slideIndex++;
-			if(slideIndex > slides.length){slideIndex = 1;}
-			slides[slideIndex - 1].style.display = 'block';						
-			if(slideIndex == slides.length){
-				myVideo.currentTime = 0;
-
-			}
-			timer = setTimeout(showSlides, 25000);
-		}
-
-		function selectSlide(number){
-			myVideo.pause();
-			slides[slideIndex - 1].style.display = 'none';			
-			slideIndex = slideIndex + number;
-			if(slideIndex <= 0){slideIndex = slides.length;}
-			if(slideIndex > slides.length){slideIndex = 1;}
-			slides[slideIndex - 1].style.display = 'block';
-			if(slideIndex == slides.length){
-				myVideo.currentTime = 0;
-
-			}
-		}			
-	</script>
 </BODY>
 </HTML>

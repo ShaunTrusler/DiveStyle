@@ -1,11 +1,12 @@
 var slideIndex = 0;
 var slides = document.getElementsByClassName('slideshow');
-var myVideo = document.getElementById('advid');
-
+var timer;
 
 function showSlides(){
+	var myVideo = document.getElementById('advid');
 	myVideo.pause();
 	for(i = 0; i < slides.length; i++){
+		
 		slides[i].style.display = 'none';
 	}
 	slideIndex++;
@@ -15,11 +16,13 @@ function showSlides(){
 		myVideo.currentTime = 0;
 
 	}
-	setTimeout(showSlides, 20000);
+	timer = setTimeout(showSlides, 25000);
 }
 
 function selectSlide(number){
+	var myVideo = document.getElementById('advid');
 	myVideo.pause();
+	
 	slides[slideIndex - 1].style.display = 'none';			
 	slideIndex = slideIndex + number;
 	if(slideIndex <= 0){slideIndex = slides.length;}
@@ -29,4 +32,18 @@ function selectSlide(number){
 		myVideo.currentTime = 0;
 
 	}
-}			
+}
+
+function showModal(id){
+	document.getElementById(id).style.display = "block";
+}
+
+function hideModal(id){
+	document.getElementById(id).style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+	hideModal('DSD-Modal');
+  }
+}
