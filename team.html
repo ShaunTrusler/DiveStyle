@@ -1,31 +1,36 @@
 <!doctype HTML>
 <HTML>
 <HEAD>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-	<link href='css/DesktopStyle.css' rel='stylesheet'>	
+	<link rel='stylesheet' media='screen and (max-width: 1020px)' href='css/MobileStyle.css' />
+	<link rel='stylesheet' media='screen and (min-width: 1021px)' href='css/DesktopStyle.css' />
+	<script src='js/Javascript.js'></script>
 	<script src='js/lazyLoad.js'></script>
 	<style>
 		
 	</style>
 </HEAD>
 <BODY>
-	
 	<div class='header-bar'>
-		<div class='partner-logo'><img class='logoimage' src='media/logo/PADI_logo_300dpi_Hor_Trap_RGB.png'></div>
-		<div class='mylink dropdownbtn'><a href='Academy.html'>ACADEMY</a>
-			<div class='dropdown'>
-				<div class='mylink'><a href='academy.html#Start'>Start your new Divestyle journey</a></div>
-				<div class='mylink'><a href='academy.html#Con-ed'>Continue your Divestyle journey</a></div>
-				<div class='mylink'><a href='academy.html#Prep'>Prepare for your Divesyle</a></div>
+		<div class='nav'>
+			<div class='side-nav' onclick='openNav()'>&#9776;</div>
+			<div class='partner-logo left'><img class='logoimage' src='media/logo/PADI_logo_300dpi_Hor_Trap_RGB.png'></div>
+			<div class='mylink dropdownbtn'><a href='Academy.html'>ACADEMY</a>
+				<div class='dropdown'>
+					<div class='mylink'><a href='academy.html#Start'>Start your new Divestyle journey</a></div>
+					<div class='mylink'><a href='academy.html#Con-ed'>Continue your Divestyle journey</a></div>
+					<div class='mylink'><a href='academy.html#Prep'>Prepare for your Divesyle</a></div>
+				</div>
 			</div>
+			<div class='mylink'><a href='travel.html'>TRAVEL</a></div>
+			<div class='mylink'><a href='team.html'>TEAM</a></div>
+			<div id='logo'><a href='index.html'><img class='logoimage' src='media/logo/Logov2.jpg'></a></div>
+			<div class='mylink'><a href='calendar.html'>CALENDAR</a></div>
+			<div class='mylink'><a href='about.html'>ABOUT US</a></div>
+			<div class='mylink'><a href='contact.html'>CONTACT US</a></div>
+			<div class='partner-logo right'><img class='logoimage' src='media/logo/EFR-Logo.jpg'></div>
 		</div>
-		<div class='mylink'><a href='travel.html'>TRAVEL</a></div>
-		<div class='mylink'><a href='team.html'>TEAM</a></div>
-		<div class='logo'><a href='index.html'><img class='logoimage' src='media/logo/Logov2.jpg'></a></div>
-		<div class='mylink'><a href='calendar.html'>CALENDAR</a></div>
-		<div class='mylink'><a href='about.html'>ABOUT US</a></div>
-		<div class='mylink'><a href='contact.html'>CONTACT US</a></div>
-		<div class='partner-logo'><img class='logoimage' src='media/logo/EFR-Logo.jpg'></div>
 	</div>
 	
 	<div id='Start'class='content-block'>

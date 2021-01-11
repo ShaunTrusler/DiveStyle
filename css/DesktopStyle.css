@@ -166,6 +166,14 @@ body{
 	margin-right: auto;
 }
 
+.travel{
+	display: block;
+	text-align: center;
+	width: 900px;;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .content-card{
 	display: inline-block;
 	width: 350px;
@@ -272,4 +280,48 @@ iframe{
 	width: 100%;
 	height: 700px;
 	border: none;
+}
+
+.contact-card{
+	display: inline-block;
+	background-color: white;			
+	width: 400px;
+	box-shadow: 5px 0px 20px 1px #5e696b;
+}
+
+.contact-info{
+	padding: 5px;
+}
+
+.info{
+	display: inline-block;
+	text-align: center;
+	width: 600px;
+	height: 400px;
+	background-color: white;
+	
+}
+
+.input{
+	display: inline-block;
+	width: 560px;
+	padding: 10px;
+	margin: 5px;
+	background-color: light-grey;
+	border: 1px #35a2c9 solid;
+	box-shadow: 0px 0px 5px 0px #5e696b;
+}
+
+.message-block{			
+	height: 180px;
+	width: 560px;
+	padding: 10px;
+	margin: 5px;
+	background-color: liht-grey;
+	border: 1px #35a2c9 solid;
+	box-shadow: 0px 0px 5px 0px #5e696b;
+}
+
+.submitButton{
+	
 }
