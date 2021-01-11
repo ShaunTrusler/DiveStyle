@@ -5,7 +5,7 @@ body{
 }
 
 .header-bar{
-	display: flex;
+	display: none;
 	height: 120px;
 	background-color: white;
 	justify-content: center;
@@ -14,7 +14,7 @@ body{
 }
 
 .side-nav{
-	display: none;
+	font-size: 45px;
 }
 
 
