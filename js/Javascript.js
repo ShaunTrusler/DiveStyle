@@ -52,12 +52,12 @@ function openNav(){
 	var x = document.getElementsByClassName('mylink');
 	var logo = document.getElementById('logo');
 	for(i = 0; i<x.length; i++){
-		if(x[i].style.display == 'none'){			
-			x[i].style.display = 'block';
-			logo.style.display = 'none';
-		}else{
+		if(x[i].style.display == 'block'){			
 			x[i].style.display = 'none';
 			logo.style.display = 'block';
+		}else{
+			x[i].style.display = 'block';
+			logo.style.display = 'none';
 		}
 	}
 }
