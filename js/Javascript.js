@@ -47,3 +47,17 @@ window.onclick = function(event) {
 	hideModal('DSD-Modal');
   }
 }
+
+function openNav(){
+	var x = document.getElementsByClassName('mylink');
+	var logo = document.getElementById('logo');
+	for(i = 0; i<x.length; i++){
+		if(x[i].style.display == 'none'){			
+			x[i].style.display = 'block';
+			logo.style.display = 'none';
+		}else{
+			x[i].style.display = 'none';
+			logo.style.display = 'block';
+		}
+	}
+}

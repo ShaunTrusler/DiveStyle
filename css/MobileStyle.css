@@ -5,16 +5,23 @@ body{
 }
 
 .header-bar{
-	display: none;
-	height: 120px;
-	background-color: white;
-	justify-content: center;
-	align-items: center;
+	height: 100x;
+}
 
+.nav{
+	position: absolute;
+	width: 98%;
+	display: block;
+	z-index: 90;
+	background-color: white;
 }
 
 .side-nav{
-	font-size: 45px;
+	position: absolute;
+	right: 5px;
+	top: 0px;
+	padding: 5px;
+	font-size: 70px;
 }
 
 
@@ -23,9 +30,11 @@ body{
 }
 
 .mylink{
-	padding: 20px;
-	width: 120px;
 	
+	display: none;
+	padding: 2%;
+	width: 96%;
+	z-index: 99;
 }
 
 .mylink a{
@@ -39,13 +48,27 @@ body{
 	cursor: pointer;
 }
 
-.logo{
-	height: 120px;
+#logo{
+	height: 100px;
 }
 
 .partner-logo{
+	display: none;
 	height: 50px;
 }
+
+.right{
+	position: absolute;
+	top: 20px;
+	right: 100px;
+}
+
+.left{
+	position: absolute;
+	top: 2px;
+	left: 25px;
+}
+
 
 .logoimage{
 	height: 100%;
@@ -58,10 +81,11 @@ body{
 }
 
 .slideshow-contatiner{
-	position: relative;
+	position: absolute;
+	top: 120px;
 	display: block;
-	max-width: 1080px;;
-	height: 100%;
+	max-width: 1080px;
+
 	padding: 1%;
 	margin-top: 10px;
 	margin-left: auto;
@@ -75,11 +99,12 @@ body{
 	position: relative;
 	height: 100%;
 	text-align: center;
+	top: 0px;
 }
 
 
 .digital-adverts{
-	height: 100%;
+	margin-top: 0px;;
 	width: 100%;
 	display: block;
 	object-fit: contain;			
@@ -94,14 +119,14 @@ body{
 .prev, .next{
 	cursor: pointer;
 	position: absolute;
-	top: 50%;
+	top: 30%;
 	width: auto;
 	margin-top: -50px;
 	color: white;
 	font-weight: bold;
 	font-size: 70px;
 	border-radius: 0 3px 3px 0;
-	z-index: 88;
+	z-index: 5;
 	
 }
 
@@ -125,8 +150,8 @@ body{
 	width: 100%;
 	object-fit: contain;
 	position: absolute;
-	bottom: 15px;
-	z-index: 99;			
+	top: 25px;
+	z-index: 55;			
 	color: white;
 	font-size: 55px;
 	text-align: center;	
@@ -202,12 +227,6 @@ body{
 	box-shadow: 5px 0px 20px 1px #5e696b;
 	z-index: 99;
 }
-
-.dropdownbtn:hover .dropdown{
-	display: block;
-}
-
-
 
 .content-card a{
 	text-decoration: none;
