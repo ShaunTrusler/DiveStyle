@@ -265,7 +265,7 @@ body{
 	display: none;
 	position: fixed;
 	z-index: 99;
-	padding: 50px;			
+	padding-top: 50px;			
 	left: 0;
 	top: 0;
 	width: 96vw;
@@ -295,6 +295,10 @@ body{
 	color: #000;
 	text-decoration: none;
 	cursor: pointer;
+}
+
+.h1{
+	font-size: 25px;
 }
 
 .course-desription{
