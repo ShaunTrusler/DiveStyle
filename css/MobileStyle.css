@@ -40,6 +40,7 @@ body{
 .mylink a{
 	text-decoration: none;
 	color: black;
+	
 }
 
 .mylink:hover{
@@ -53,20 +54,23 @@ body{
 }
 
 .partner-logo{
-	display: none;
+	display: block;
 	height: 50px;
+	z-index: 1;
 }
 
 .right{
 	position: absolute;
 	top: 20px;
 	right: 100px;
+	z-index: 1;
 }
 
 .left{
 	position: absolute;
-	top: 2px;
+	top: 20px;
 	left: 25px;
+	z-index: 1;
 }
 
 
@@ -120,7 +124,7 @@ body{
 .prev, .next{
 	cursor: pointer;
 	position: absolute;
-	top: 30%;
+	top: 20%;
 	width: auto;
 	margin-top: -50px;
 	color: white;
@@ -154,7 +158,7 @@ body{
 	bottom: 25px;
 	z-index: 55;			
 	color: white;
-	font-size: 40px;
+	font-size: 25px;
 	text-align: center;	
 	
 }
@@ -174,7 +178,7 @@ body{
 .link{
 	width: 55%;
 	color: #2b3031;
-	font-size: 30px;
+	font-size: 20px;
 	font-weight: 900;
 	margin-left: auto;
 	margin-right: auto;

@@ -50,14 +50,21 @@ window.onclick = function(event) {
 
 function openNav(){
 	var x = document.getElementsByClassName('mylink');
+	var partner = document.getElementsByClassName('partner-logo');
 	var logo = document.getElementById('logo');
 	for(i = 0; i<x.length; i++){
 		if(x[i].style.display == 'block'){			
 			x[i].style.display = 'none';
 			logo.style.display = 'block';
+			for( z = 0; z < partner.length; z++){
+				partner[z].style.display = 'block';
+			}
 		}else{
 			x[i].style.display = 'block';
 			logo.style.display = 'none';
+			for( z = 0; z < partner.length; z++){
+				partner[z].style.display = 'none';
+			}
 		}
 	}
 }
