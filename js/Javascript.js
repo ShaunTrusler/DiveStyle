@@ -9,12 +9,24 @@ function showSlides(){
 		
 		slides[i].style.display = 'none';
 	}
-	slideIndex++;
-	if(slideIndex > slides.length){slideIndex = 1;}
-	slides[slideIndex - 1].style.display = 'block';						
-	if(slideIndex == slides.length){
-		myVideo.currentTime = 0;
+	
+	if(window.innerWidth > 1020){
+		slideIndex++;	
+		if(slideIndex > slides.length){slideIndex = 1;}
+		slides[slideIndex - 1].style.display = 'block';						
+		if(slideIndex == slides.length){
+			myVideo.currentTime = 0;
 
+		}
+	}else{
+		slideIndex = slideIndex + 2;
+		if(slideIndex > slides.length){slideIndex = 2;}
+		slides[slideIndex - 2].style.display = 'block';
+		slides[slideIndex - 1].style.display = 'block';
+		if(slideIndex == slides.length){
+			myVideo.currentTime = 0;
+
+		}
 	}
 	timer = setTimeout(showSlides, 25000);
 }
@@ -23,14 +35,32 @@ function selectSlide(number){
 	var myVideo = document.getElementById('advid');
 	myVideo.pause();
 	
-	slides[slideIndex - 1].style.display = 'none';			
-	slideIndex = slideIndex + number;
-	if(slideIndex <= 0){slideIndex = slides.length;}
-	if(slideIndex > slides.length){slideIndex = 1;}
-	slides[slideIndex - 1].style.display = 'block';
-	if(slideIndex == slides.length){
-		myVideo.currentTime = 0;
+	if(window.innerWidth > 1020){
+		slides[slideIndex - 1].style.display = 'none';			
+		slideIndex = slideIndex + number;
+		if(slideIndex <= 0){slideIndex = slides.length;}
+		if(slideIndex > slides.length){slideIndex = 1;}
+		slides[slideIndex - 1].style.display = 'block';
+		if(slideIndex == slides.length){
+			myVideo.currentTime = 0;
+		}
+	}else{
+		slides[slideIndex - 1].style.display = 'none';
+		slides[slideIndex - 2].style.display = 'none';
+		if(number == 1){
+			slideIndex = slideIndex + number + 1;
+		}else{
+			slideIndex = slideIndex + number - 1;
+		}
+		
+		if(slideIndex <= 1){slideIndex = slides.length;}
+		if(slideIndex > slides.length){slideIndex = 2;}
+		slides[slideIndex - 1].style.display = 'block';
+		slides[slideIndex - 2].style.display = 'block';
+		if(slideIndex == slides.length){
+			myVideo.currentTime = 0;
 
+		}
 	}
 }
 
