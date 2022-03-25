@@ -43,6 +43,8 @@ body{
 
 #logo{
 	height: 120px;
+	width: 150px;
+	object-fit: contain;
 }
 
 .partner-logo{
@@ -52,6 +54,8 @@ body{
 .logoimage{
 	height: 100%;
 	text-align: center;
+	width: 150px;
+	object-fit: contain;
 }
 
 .content-block{
