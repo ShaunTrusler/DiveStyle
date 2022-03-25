@@ -1,2 +1,2 @@
-# DiveStyle
+# ScubaLife Website
  
