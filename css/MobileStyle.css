@@ -58,6 +58,33 @@ body{
 	height: 30px;
 	z-index: 1;
 }
+.About{
+	display: block;
+	color: white;
+	width: 90%;
+	font-size: 25px;
+}
+
+.col-left{
+	display: inline-block;
+	width: 100%;
+	padding-left: 5%;
+	padding-right: 5%;
+	align-self: center;
+}
+
+.col-right{
+	display: inline-block;
+	width: 100%;
+	padding-left: 5%;
+	padding-right: 5%;
+	align-self: center;
+}
+
+.pictures{
+	width: 100%;
+	object-fit: contain;
+}
 
 .right{
 	display: none;

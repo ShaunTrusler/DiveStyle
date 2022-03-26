@@ -51,6 +51,34 @@ body{
 	height: 50px;
 }
 
+.About{
+	display: flex;
+	color: white;
+	width: 100%;
+	font-size: 25px;
+}
+
+.col-left{
+	display: inline-block;
+	width: 40%;
+	padding-left: 5%;
+	padding-right: 5%;
+	align-self: center;
+}
+
+.col-right{
+	display: inline-block;
+	width: 40%;
+	padding-left: 5%;
+	padding-right: 5%;
+	align-self: center;
+}
+
+.pictures{
+	width: 100%;
+	object-fit: contain;
+}
+
 .logoimage{
 	height: 100%;
 	text-align: center;
