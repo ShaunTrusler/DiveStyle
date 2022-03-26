@@ -59,11 +59,6 @@ body{
 	z-index: 1;
 }
 
-.pictures{
-	width: 100%;
-	object-fit: contain;
-}
-
 .right{
 	display: none;
 	position: absolute;
@@ -377,4 +372,9 @@ iframe{
 	padding-left: 5%;
 	padding-right: 5%;
 	align-self: center;
+}
+
+.pictures{
+	width: 100%;
+	object-fit: contain;
 }
