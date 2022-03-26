@@ -173,7 +173,7 @@ body{
 .travel{
 	display: block;
 	text-align: center;
-	width: 1200px;;
+	width: 1500px;;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -329,7 +329,7 @@ iframe{
 .about{
 	display: flex;
 	color: white;
-	width: 90%;
+	width: 100%;
 	font-size: 25px;
 }
 
