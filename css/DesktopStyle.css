@@ -60,7 +60,7 @@ body{
 
 .col-left{
 	display: inline-block;
-	width: 40%;
+	width: 80%;
 	padding-left: 5%;
 	padding-right: 5%;
 	align-self: center;
@@ -68,7 +68,7 @@ body{
 
 .col-right{
 	display: inline-block;
-	width: 40%;
+	width: 80%;
 	padding-left: 5%;
 	padding-right: 5%;
 	align-self: center;
