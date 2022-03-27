@@ -60,7 +60,7 @@ body{
 }
 
 .right{
-	display: none;
+	display: absolute;
 	position: absolute;
 	top: 35px;
 	right: 100px;
@@ -356,7 +356,7 @@ iframe{
 	color: white;
 	width: 90%;
 	font-size: 25px;
-}
+} 
 
 .col-left{
 	display: block;
