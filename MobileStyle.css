@@ -352,14 +352,14 @@ iframe{
 }
 
 .about{
-	display: flex;
+	display: block;
 	color: white;
 	width: 90%;
 	font-size: 25px;
 }
 
 .col-left{
-	display: inline-block;
+	display: block;
 	width: 100%;
 	padding-left: 5%;
 	padding-right: 5%;
@@ -367,7 +367,7 @@ iframe{
 }
 
 .col-right{
-	display: inline-block;
+	display: block;
 	width: 100%;
 	padding-left: 5%;
 	padding-right: 5%;
@@ -377,4 +377,8 @@ iframe{
 .pictures{
 	width: 100%;
 	object-fit: contain;
+}
+
+#beach_image{
+	display: none;
 }
